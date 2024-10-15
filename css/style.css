@@ -1,0 +1,7 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    /*Calcula a porcentagem também com o padding e margin*/
+    box-sizing: border-box;
+}
+

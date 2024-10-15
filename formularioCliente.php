@@ -7,7 +7,7 @@
     <title>Cadastro de Clientes</title>
 </head>
 <body>
-    <main>
+    <div class="container">
     <h1>Cadastro de Clientes</h1>
         <div class="card no-hover">
             <form action="listagemCliente.php" method="post">
@@ -27,6 +27,6 @@
                 </div>
         </div>
         </div>
-    </main>
+</div>
 </body>
 </html>

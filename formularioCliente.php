@@ -8,9 +8,10 @@
 </head>
 <body>
     <main>
-        <h3>Cadastro de Clientes</h3>
-        <div>
+    <h1>Cadastro de Clientes</h1>
+        <div class="card no-hover">
             <form action="listagemCliente.php" method="post">
+            <div style="display:flex;flex-direction:column; gap:10px">
                 <label>Nome</label>
                 <input type="text" name="nome" placeholder="Nome"/>
 
@@ -19,10 +20,12 @@
 
                 <label>Telefone</label>
                 <input type="text" name="telefone" placeholder="Telefone"/>
-
-                <input type="submit" name="btCadastrar" value="Cadastrar"/>
             </form>
-        <a href="listagemCliente.php">Voltar<a/>
+            <div style="display:flex;gap:5px;margin-top:20px;">
+                    <button class="button" type="submit" name="btCadastrar" value="Cadastrar">Cadastrar</button>
+                    <a href="listagemCliente.php"><button class="button">Voltar</button></a>
+                </div>
+        </div>
         </div>
     </main>
 </body>

@@ -28,27 +28,39 @@ $produtos = $produtoCSV->read_all();
     <title>Listagem de produtos</title>
 </head>
 <body>
-    <main>
-        <div class="div_table">
-            <table class="tblprodutos">
-                <tr>
-                    <th>Descrição</th>
-                    <th>Tipo</th>
-                    <th>Quantidade</th>
-                    <th>Valor</th>
-                </tr>
-                <?php foreach($produtos as $produto) {?>
-                <tr>
-                    <td><?=$produto->getDescricao()?></td>
-                    <td><?=$produto->getTipo()?></td>
-                    <td><?=$produto->getQuantidade()?></td>
-                    <td><?=$produto->getValor()?></td>
-                </tr>
-                <?php }?>
-            </table>
+    <div class="container">
+        <h1>Produtos</h1>
+        <div class="card" style="padding:8px">
+            <div class="div_table">
+                <table class="tbl">
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Tipo</th>
+                        <th>Quantidade</th>
+                        <th>Valor</th>
+                    </tr>
+                    <?php foreach($produtos as $produto) {?>
+                    <tr>
+                        <td><?=$produto->getDescricao()?></td>
+                        <td><?=$produto->getTipo()?></td>
+                        <td><?=$produto->getQuantidade()?></td>
+                        <td><?=$produto->getValor()?></td>
+                    </tr>
+                    <?php }?>
+                </table>
+            </div>
         </div>
-        <a href="index.html">Voltar</a>
-        <a href="formularioProduto.php">Cadastrar</a>
-    </main>
+        <div style="display:flex; gap:5px ">
+            <a href="index.html"><div class="button">Voltar</div></a>
+            <a href="formularioProduto.php"><div class="button">Cadastrar</div></a>
+        </div>
+        
+        
+        
+                    </div>
+
+        
+
+    
 </body>
 </html>

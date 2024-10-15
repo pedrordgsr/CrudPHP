@@ -20,32 +20,39 @@ $clientes = $clienteCSV->read_all();
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Listagem de clientes</title>
 </head>
+
 <body>
-    <main>
-        <div class="div_table">
-            <table class="tblclientes">
+    <div class="container">
+        <h1>Clientes</h1>
+        <div class="card" style="padding:8px">
+            <table class="tbl">
                 <tr>
                     <th>Nome</th>
                     <th>Endereço</th>
                     <th>Telefone</th>
                 </tr>
-                <?php foreach($clientes as $cliente) {?>
-                <tr>
-                    <td><?=$cliente->getNome()?></td>
-                    <td><?=$cliente->getEndereco()?></td>
-                    <td><?=$cliente->getTelefone()?></td>
-                </tr>
-                <?php }?>
+                <?php foreach ($clientes as $cliente) { ?>
+                    <tr>
+                        <td><?= $cliente->getNome() ?></td>
+                        <td><?= $cliente->getEndereco() ?></td>
+                        <td><?= $cliente->getTelefone() ?></td>
+                    </tr>
+                <?php } ?>
             </table>
         </div>
-        <a href="index.html">Voltar</a>
-        <a href="formularioCliente.php">Cadastrar</a>
-    </main>
+        <div class="buttons" style="display:flex; gap:5px ">
+            <a href="index.html"><div class="button">Voltar</div></a>
+            <a href="formularioCliente.php"><div class="button">Cadastrar</div></a>
+        </div>
+
+    </div>
 </body>
+
 </html>
